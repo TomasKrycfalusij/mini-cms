@@ -3,6 +3,7 @@
 import Button from "@/components/common/Button";
 import Input from "@/components/forms/Input";
 import { signIn } from "next-auth/react";
+import Link from "next/link";
 import { useRef, useState } from "react";
 
 const LoginForm = () => {
@@ -38,6 +39,7 @@ const LoginForm = () => {
             <Button style="font-bold" type="submit" loading={loading}>
                 Sign In
             </Button>
+            <p className="text-sm">Nemáš ještě účet? <Link className="text-[var(--primary)]" href="/auth/register">Registruj se</Link></p>
         </form>
     );
 }
